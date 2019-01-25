@@ -11,16 +11,6 @@ const StyledLargeBtn = styled.button`
   margin: 0 auto;
   background: #eb6259;
   transition: all 0.1s cubic-bezier(0.67, 0.13, 0.1, 0.81);
-  &:hover {
-    cursor: pointer;
-    transform: translateY(2px);
-    box-shadow: 10px 55px 150px -20px #2a628f;
-  }
-
-  &:active {
-    transform: translateY(4px);
-    background: #2a628f;
-  }
 
   &:after {
     content: "";
@@ -35,10 +25,24 @@ const StyledLargeBtn = styled.button`
     transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
+  &:hover {
+    cursor: pointer;
+    transform: translateY(2px);
+    box-shadow: 10px 55px 150px -20px #2a628f;
+    &:after {
+      transform: scaleY(1);
+      transform-origin: bottom;
+    }
+  }
+
+  &:active {
+    transform: translateY(4px);
+  }
+
   ${devices.md`
     width: 60%;
     position: relative; 
-    top: 60%;
+    top: 80%;
   `};
 `;
 

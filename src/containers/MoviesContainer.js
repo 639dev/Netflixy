@@ -1,7 +1,7 @@
 import React from "react";
+import _ from "lodash";
 import { connect } from "react-redux";
 import Movies from "../components/Movies";
-import _ from "lodash";
 import { getMovies } from "../actions/movieActions";
 import { GET_MOVIES } from "../constants/labels";
 
@@ -14,5 +14,7 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getMovies }
+  {
+    getMovies
+  }
 )(MoviesContainer);

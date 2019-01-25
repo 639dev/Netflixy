@@ -3,16 +3,17 @@ import { devices } from "../utils/styledUtils";
 
 const StyledMovieContainer = styled.section`
   background: ${props => props.theme.secondaryBg};
+  position: relative;
   width: 100%;
-  height: 100vh;
-  padding-right: 10px;
-  padding-left: 10px;
+  min-height: 100vh;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
+
   ${devices.md`
-  	width: 640px;
-  	height: 390px;
-  	border-radius: 15px; 
+    width: 640px;
+    min-height: 390px;
+    border-radius: 15px;
   `};
 `;
 
