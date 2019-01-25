@@ -7,6 +7,7 @@ import Movie from "./Movie";
 import StyledFooter from "./StyledFooter";
 import StyledLargeBtn from "./StyledLargeBtn";
 import StyledLoader from "./StyledLoader";
+import StyledMovieLink from "./StyledMovieLink";
 
 class Movies extends Component {
   componentDidMount() {
@@ -26,13 +27,15 @@ class Movies extends Component {
             <StyledLoader />
           ) : (
             this.props.movies.map(movie => (
-              <Movie
-                key={movie.id}
-                name={movie.name}
-                poster={movie.poster}
-                duration={movie.duration}
-                year={movie.year}
-              />
+              <StyledMovieLink href={`/movies/${movie.id}`} key={movie.id}>
+                <Movie
+                  key={movie.id}
+                  name={movie.name}
+                  poster={movie.poster}
+                  duration={movie.duration}
+                  year={movie.year}
+                />
+              </StyledMovieLink>
             ))
           )}
         </StyledHorizontalScroll>
