@@ -1,11 +1,12 @@
 import * as actions from "../../actions/apiActions";
 
 beforeEach(() => {
-  //   moxios.install();
+  // moxios works by intercepting actual requests made to axios, but it doesn’t stop there.
+  // moxios.install();
 });
 
 afterEach(() => {
-  //   moxios.uninstall();
+  // moxios.uninstall();
 });
 
 describe("test apiActions", () => {
