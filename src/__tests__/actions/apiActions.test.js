@@ -1,5 +1,13 @@
 import * as actions from "../../actions/apiActions";
 
+beforeEach(() => {
+  //   moxios.install();
+});
+
+afterEach(() => {
+  //   moxios.uninstall();
+});
+
 describe("test apiActions", () => {
   test("apiStart", () => {
     const expectedVal = {
