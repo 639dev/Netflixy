@@ -14,7 +14,6 @@ function setMovies(movies) {
   //we gotta normalize this data before sending it off to the reducers.
   const movieSchema = new schema.Entity("movies");
   const movieListSchema = new schema.Array(movieSchema);
-  //in computer programming, a schema is the organization or structire for a database.
   const normalizedData = normalize(movies, movieListSchema);
   return {
     type: SET_MOVIES,
